@@ -1,0 +1,30 @@
+/* Two controlled widths, shared row alignment and original portfolio imagery. */
+.project-grid{gap:76px 32px;align-items:start}
+.project-card:nth-child(n){margin:0;max-width:none}
+.project-card:nth-child(1),.project-card:nth-child(5){grid-column:1 / 8}
+.project-card:nth-child(2),.project-card:nth-child(6){grid-column:8 / 13}
+.project-card:nth-child(3){grid-column:1 / 6}
+.project-card:nth-child(4){grid-column:6 / 13}
+.project-card:nth-child(n) .project-media{height:clamp(320px,35vw,600px);aspect-ratio:auto}
+.actual-art{position:relative;width:100%;height:100%;margin:0;background:#eae8e2;overflow:hidden;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.actual-art img{width:100%;height:100%;object-fit:contain;display:block}
+.actual-art figcaption{position:absolute;left:14px;bottom:12px;background:#f4f3ece6;color:#4c4b43;padding:3px 7px;font:400 9px/1.5 Pretendard,var(--body);border-radius:2px}
+.actual-g-shock{background:#eeefeb}.actual-g-shock img{padding:3.5%}
+.actual-compass{background:#070807}
+.actual-mission img{object-fit:cover}
+.actual-vidence{background:#fbfaf7}.actual-vidence img{padding:7%}
+.actual-mushroom-ar{background:#3d3d3d}
+.process-window{width:100%;height:100%;overflow:hidden;position:relative}
+.project-media .process-window{position:absolute;left:0;top:50%;width:100%;height:auto;aspect-ratio:1120/490;transform:translateY(-50%)}
+.project-media .process-window img{position:absolute;width:182.857143%;height:auto;max-width:none;left:-35.714286%;top:-40.816327%}
+.actual-image-studies{background:#263228}
+.project-link:hover .actual-art{transform:scale(1.025)}
+.project-cover .actual-art,.case-visual .actual-art{height:100%}
+.project-cover .actual-art img,.case-visual .actual-art img{object-fit:contain}
+@media(max-width:1000px){.project-grid{gap:56px 24px}.project-card:nth-child(n) .project-media{height:350px}}
+@media(max-width:700px){
+ .project-card:nth-child(n){width:100%;margin:0 0 46px}
+ .project-card:nth-child(n) .project-media{height:auto;aspect-ratio:1.1}
+ .project-card:nth-child(1) .project-media,.project-card:nth-child(6) .project-media{aspect-ratio:.9}
+ .actual-art figcaption{font-size:8px}
+}
