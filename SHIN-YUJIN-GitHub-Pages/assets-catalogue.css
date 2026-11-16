@@ -1,0 +1,68 @@
+/* The portfolio keeps one card per project; filters regroup the same work. */
+.work-section .section-heading-row{margin-bottom:48px}
+.work-toolbar{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-bottom:36px;padding-bottom:20px;border-bottom:1px solid #24251f24}
+.work-filters{display:flex;flex-wrap:wrap;gap:10px 28px}
+.work-filters button{min-height:44px;font-size:11px;font-weight:600;letter-spacing:.02em;border-bottom:1px solid transparent;transition:color .2s,border-color .2s}
+.work-filters button[aria-pressed=true]{color:var(--plum);border-color:var(--plum)}
+.work-filters sup{font-size:8px;margin-left:5px;font-weight:400}
+.work-count{font-size:9px;letter-spacing:.05em;white-space:nowrap;color:var(--muted)}
+.project-card:nth-child(n){grid-column:var(--card-column);margin:0;max-width:none}
+.project-card:nth-child(n) .project-media{height:clamp(300px,31vw,520px);aspect-ratio:auto}
+.project-caption h3{margin-top:5px;font-family:var(--display),Pretendard,Arial,sans-serif;line-height:1.25;word-break:keep-all;overflow-wrap:anywhere}.project-caption .number{margin-left:auto}
+.source-cover{width:100%;height:100%;margin:0;background:#eae8e1;overflow:hidden;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.source-cover img{width:100%;height:100%;object-fit:contain}
+.source-cover-compass{background:linear-gradient(135deg,#41cda0,#bbf3b0)}.source-cover-mission{background:#061b23}.source-cover-off{background:#152022}.source-cover-ssg{background:#d4c4ab}.source-cover-crossy-road{background:#b5c694}
+.project-link:hover .source-cover{transform:scale(1.025)}
+.campaign-cover{display:grid;grid-template-columns:47% 53%;height:100%;width:100%;overflow:hidden;container-type:inline-size;background:#002e66;color:#f1f1f0;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.campaign-type{display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;padding:7% 7% 6% 10%;min-width:0}
+.campaign-brand{width:74%;height:auto;max-height:11%;object-fit:contain;object-position:left;filter:brightness(0) invert(1)}
+.campaign-slogan{font:900 8.8cqw/.85 Impact,'Arial Black',Arial,sans-serif;letter-spacing:-.045em;margin:10% 0;color:#eb5e1e}
+.campaign-slogan span{display:block;margin-top:.2em;color:#f1f1f0}
+.campaign-edition{font:600 1.1cqw/1.5 var(--body);letter-spacing:.05em;max-width:20cqw}
+.campaign-image{position:relative;min-width:0;overflow:hidden}
+.campaign-photo{width:100%;height:100%;object-fit:cover;object-position:50% 100%}
+.campaign-symbol{position:absolute;right:8%;top:6%;width:23%;height:auto;max-height:20%;object-fit:contain;filter:brightness(0) invert(1)}
+.project-link:hover .campaign-cover{transform:scale(1.025)}
+.source-project .project-intro{padding-bottom:42px}
+.source-project .project-title-grid{grid-template-columns:1.1fr 1fr}
+.source-project .project-title-grid h1{font-size:clamp(60px,7.7vw,130px)}
+.source-project .project-meta{max-width:none;grid-template-columns:1fr 1.15fr 1fr;margin-bottom:0}
+.project-credit{margin:20px 0 0;font:400 12px/1.8 Pretendard,var(--body);color:var(--muted);word-break:keep-all}
+.project-links{display:flex;gap:24px;flex-wrap:wrap;margin-top:26px}.project-links:empty{display:none}
+.project-external{display:inline-flex;align-items:center;gap:36px;min-height:44px;border-bottom:1px solid currentColor;font:500 13px Pretendard,var(--body)}
+.project-external span{font-size:21px;transition:transform .2s}.project-external:hover span{transform:translate(3px,-3px)}
+.source-project .project-cover{height:auto;aspect-ratio:auto}
+.source-project .project-cover .source-cover img{height:auto;max-height:860px;object-fit:contain}
+.source-project .project-cover .campaign-cover{aspect-ratio:1.75}
+.source-project .project-cover .actual-art{aspect-ratio:1.7}
+.source-project .project-cover .actual-art figcaption{display:none}
+.source-project .project-note:empty{display:none}
+.story-section{padding-bottom:25px}
+.story-section .case-section{padding-top:80px;padding-bottom:45px;grid-template-columns:1fr 1.7fr;gap:8%}
+.story-section .case-body h2{font-size:clamp(28px,3.1vw,46px);margin-bottom:24px}
+.story-section .case-body p+p{margin-top:20px}
+.case-gallery{margin:0 var(--gutter)}
+.case-image{margin:0 0 28px;background:transparent}
+.case-image>a{display:block;background:#eae8e1;overflow:hidden}
+.case-image img{width:100%;height:auto;max-height:1000px;object-fit:contain}
+.case-image figcaption{display:flex;justify-content:space-between;gap:22px;font:400 11px/1.7 Pretendard,var(--body);color:var(--muted);padding-top:12px}
+.case-image figcaption>a{white-space:nowrap;text-decoration:underline;text-underline-offset:3px;min-height:32px}
+.case-image-icons>a{padding:60px 32px;background:#fffefa}
+.case-image-icons img{max-width:1446px;margin:auto}
+.screen-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;background:#e7e9df;padding:42px;margin-top:4px}
+.screen-gallery .case-image{min-width:0;margin:0}.screen-gallery .case-image>a{background:transparent}.screen-gallery .case-image img{max-height:720px;object-fit:contain;width:100%;height:auto}
+.screen-gallery .case-image figcaption{font-size:10px;gap:8px}
+.source-project .next-project{margin-top:70px;background:var(--paper);border-top:1px solid #24251f30}
+@media(min-width:701px) and (max-width:1000px){.project-card:nth-child(n) .project-media{height:300px}.work-filters{gap:6px 18px}.source-project .project-title-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:700px){
+ .work-section .section-heading-row{margin-bottom:30px}.work-toolbar{display:block;margin-bottom:28px;padding-bottom:14px}.work-filters{gap:3px 19px}.work-filters button{font-size:10px}.work-count{display:block;margin-top:13px;font-size:8px}
+ .project-card:nth-child(n){width:100%;margin:0 0 40px}.project-card:nth-child(n) .project-media{height:auto;aspect-ratio:1.3}.project-card[data-work-group=brand] .project-media{aspect-ratio:1.3}
+ .campaign-slogan{font-size:9.4cqw}.campaign-edition{font-size:1.3cqw;max-width:25cqw}.campaign-brand{width:87%}.campaign-symbol{width:26%}
+ .source-project .project-title-grid{display:block}.source-project .project-title-grid h1{font-size:15.2vw;overflow-wrap:normal;word-break:normal}.source-project .project-meta{grid-template-columns:1fr 1fr;font-size:10px;gap:20px 22px}.source-project .project-meta>div:last-child{grid-column:1 / -1}.source-project .project-intro{padding-bottom:30px}
+ .project-credit{font-size:11px;line-height:1.8}.project-links{gap:16px;margin-top:21px}.project-external{font-size:12px;gap:28px}
+ .source-project .project-cover .campaign-cover{aspect-ratio:1.3}.source-project .project-cover .actual-art{aspect-ratio:1.2}
+ .story-section{padding-bottom:0}.story-section .case-section{grid-template-columns:1fr;gap:22px;padding-top:54px;padding-bottom:28px}.story-section .case-body h2{font-size:27px;line-height:1.45}.story-section .case-body p{font-size:14px}
+ .case-gallery{margin:0 12px}.case-image{margin-bottom:18px}.case-image figcaption{padding:10px 10px 0;font-size:10px;gap:16px}.case-image-icons>a{padding:30px 14px}.source-project .next-project{margin-top:48px}
+ .screen-gallery{grid-template-columns:repeat(2,minmax(0,1fr));padding:20px 14px;gap:22px 14px}.screen-gallery .case-image figcaption{display:block;padding:10px 0 0;font-size:9px}.screen-gallery .case-image figcaption>a{display:block;margin-top:3px}
+}
+@media(prefers-reduced-motion:reduce){.source-cover,.campaign-cover,.project-external span{transition:none}}
